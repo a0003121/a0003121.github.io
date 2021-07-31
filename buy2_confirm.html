@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="zh-hant">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>付款寄件</title>
+    <link rel="stylesheet" href="vendors/bootstrap.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.3/css/all.css" integrity="sha384-SZXxX4whJ79/gErwcOYf+zWLeJdY/qpuqC4cAa9rOGUstPomtqpuNWT9wdPEn2fk" crossorigin="anonymous">
+    <link rel="stylesheet" href="style/style.css">
+    <link rel="stylesheet" href="style/buy.css">
+
+</head>
+
+<body class="container-fluid">
+   <!-- 購物流程圖示 -->
+   <section class="process row justify-content-end">
+    <div class="col-sm-3">
+        <i class=" fas fa-shopping-cart "></i>
+        <div>
+            <p>Step 1</p>
+            <p> 購物車 </p>
+        </div>
+    </div>
+    <div class="dash col-sm-1">-----</div>
+    <div class="col-sm-3">
+        <i class="far fa-credit-card"></i>
+        <div>
+            <p>Step 2</p>
+            <p>訂購資訊</p>
+        </div>
+    </div>
+    <div class="dash gray col-sm-1">-----</div>
+
+    <div class="col-sm-3">
+        <i class="fas fa-check-circle gray"></i>
+        <div>
+            <p class="gray">Step 3</p>
+            <p class="gray">訂購完成</p>
+        </div>
+    </div>
+
+</section>
+    <hr>
+
+    <!-- 付款和地址內容 -->
+
+    <section class="main_part">
+        <h1>資訊確認</h1>
+        <hr>
+
+        <section class="product row">
+            <h3 class="col-sm-2">訂購商品</h3>
+            <!-- 商品列 -->
+            <div class="product_list col-sm-10">
+                <div class="row justify-content-between cart_header">
+                    <div class="col-2"></div>
+                    <div class="col-4">品名/規格</div>
+                    <div class="col-2">單價</div>
+                    <div class="col-2">數量</div>
+                    <div class="col-2">小計</div>
+                </div>
+                <hr>
+                <div class="row justify-content-between each_product">
+                    <div class="col-2">
+                        <img src="https://via.placeholder.com/400x300" alt="">
+                    </div>
+                    <div class="col-4">
+                        <p>❤現貨❤俏樂斯CHURACOS沖繩美人の All-In-One Gel 幼美肌超導逆時彈力水凝霜30g</p>
+                        <p>規格</p>
+                    </div>
+                    <div class="col-2">1,000</div>
+                    <div class="col-2">2</div>
+                    <div class="col-2">1,000</div>
+                </div>
+                <hr>
+                <div class="row justify-content-between each_product">
+                    <div class="col-2">
+                        <img src="https://via.placeholder.com/400x300" alt="">
+                    </div>
+                    <div class="col-4">
+                        <p>品名</p>
+                        <p>規格</p>
+                    </div>
+                    <div class="col-2">1,000</div>
+                    <div class="col-2">2</div>
+                    <div class="col-2">1,000</div>
+                </div>
+                <hr>
+                <div class="row justify-content-between each_product">
+                    <div class="col-2">
+                        <img src="https://via.placeholder.com/400x300" alt="">
+                    </div>
+                    <div class="col-4">
+                        <p>❤現貨❤俏樂斯CHURACOS沖繩美人の All-In-One Gel 幼美肌超導逆時彈力水凝霜30g</p>
+                        <p>規格</p>
+                    </div>
+                    <div class="col-2">1,000</div>
+                    <div class="col-2">2</div>
+                    <div class="col-2">1,000</div>
+                </div>
+            </div>
+
+        </section>
+
+        <hr>
+        <section class="address row">
+            <h3 class="col-sm-2">運送方式</h3>
+            <div class="col-sm-10">
+                <select name="ship_method">
+                    <!-- <option value="" selected disabled hidden>選擇運送方式</option> -->
+                    <option value="1">7-11</option>
+                    <option value="2">全家</option>
+                    <option value="3">黑貓宅急便</option>
+                    <option value="4">郵局包裹</option>
+                </select><br>
+                <label>姓名: <input type="text" name="name" id="name" required></label><br>
+                <label class="phone_area">電話:
+                    <input class="phone" type="text" name="phone1" id="" required pattern="09\d{2}"
+                        maxlength="4"> -
+                    <input class="phone" type="text" name="phone2" id="" required pattern="\d{6}"
+                        maxlength="6"></label><br>
+                <label>市區: <span id="twzipcode" required></span><br>
+                    <!-- https://code.essoduke.org/twzipcode/#download -->
+                    <label>地址: <input type="text" name="address" id="" required></label><br>
+                    <label>電子郵件: <input type="text" name="email" id="" required
+                            pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" /></label><br>
+            </div>
+        </section>
+        <hr>
+        <section class="credit_info row">
+            <h3 class="col-sm-2">付費資訊</h3>
+            <div class="col-sm-10">
+                <label id="card">信用卡號碼:
+                    <input class="card_number" type="text" name="card_num1" required pattern="\d{4}"
+                        maxlength="4">-
+                    <input class="card_number" type="text" name="card_num2" required pattern="\d{4}"
+                        maxlength="4">-
+                    <input class="card_number" type="text" name="card_num3" required pattern="\d{4}"
+                        maxlength="4">-
+                    <input class="card_number" type="text" name="card_num4" required pattern="\d{4}"
+                        maxlength="4">
+                </label><br>
+                <label>日期: <input type="text" name="date" id="" required pattern="\d{2}/\d{2}"
+                        placeholder="YY/MM"></label><br>
+                <label>認證碼: <input type="text" name="CVN" id="" required pattern="\d{3}"></label><br>
+                <label>姓名: <input type="text" name="card_name" id="" required></label>
+            </div>
+        </section>
+        <hr>
+        <div class="subtotal_right">
+            <p>小計: 100</p>
+            <p>運費: 100</p>
+        </div>
+    </section>
+
+    <!-- 按鈕 -->
+    <section class="confirm">
+        <span>共選擇2項商品，總金額: $2,000</span>
+        <button class="btn_goback"><i class="fas fa-arrow-circle-left"></i>返回購物車</button>
+        <button class="btn_goto_complete"><i class="fas fa-arrow-circle-right"></i>確認訂單</button>
+    </section>
+    </main>
+
+
+    <script src="vendors/jquery-3.6.0.min.js"></script>
+    <script src="js/index.js"></script>
+    <script src="vendors/jquery.twzipcode.js"></script>
+    <script>
+        $('#twzipcode').twzipcode();
+        $("#twzipcode").find('input').attr('required', true).prop('required', true);
+        //信用卡跳格
+        $("input.card_number").on("keydown", function (e) {
+            if ((e.which >= 48 && e.which <= 57) || e.which == 8) {
+                if (e.target.value.length == 0 && e.which == 8) {
+                    $(this).prev().focus();
+                }
+            } else {
+                e.preventDefault();
+            }
+        });
+
+        $("input.card_number").on("keyup", function (e) {
+            // \D 代表非數字字元，g 代表全域尋找
+            let str = (e.target.value).replace(/\D/g, "");
+            $(this).val(str);
+            if (str.length == 4) {
+                $(this).next().focus();
+            }
+        });
+        //電話號碼跳格
+        $("input.phone").on("keydown", function (e) {
+            if ((e.which >= 48 && e.which <= 57) || e.which == 8) {
+                if (e.target.value.length == 0 && e.which == 8) {
+                    $(this).prev().focus();
+                }
+            } else {
+                e.preventDefault();
+            }
+        });
+
+        $("input.phone").on("keyup", function (e) {
+            // \D 代表非數字字元，g 代表全域尋找
+            let str = (e.target.value).replace(/\D/g, "");
+            $(this).val(str);
+            if (str.length == 4) {
+                $(this).next().focus();
+            }
+        });
+
+    
+    </script>
+
+</body>
+
+</html>

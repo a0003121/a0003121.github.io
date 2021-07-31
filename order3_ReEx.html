@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="zh-hant">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>退換貨申請</title>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.3/css/all.css" integrity="sha384-SZXxX4whJ79/gErwcOYf+zWLeJdY/qpuqC4cAa9rOGUstPomtqpuNWT9wdPEn2fk" crossorigin="anonymous">
+    <link rel="stylesheet" href="style/style.css">
+    <link rel="stylesheet" href="style/order.css">
+</head>
+
+<body>
+    
+
+
+
+    <!------------- main page --------------->
+    <main>
+        <h1>退換貨</h1>
+        <hr>
+        <!-- 每筆訂單 -->
+        <section class="each_order">
+            <!-- 每筆訂單標頭 -->
+            <article class="head">
+                <span>訂單編號:XXXXXXXXXX</span>
+                <span>購買時間: 2011/4/5</span>
+            </article>
+            <hr>
+
+            <!-- 商品列表 -->
+            <span>退換貨商品選擇: </span>
+            <select name="cars">
+                <option value="" selected disabled hidden>選擇退/換貨</option>
+                <option value="sale">退貨</option>
+                <option value="eval">換貨</option>
+            </select>
+
+            <table>
+                <thead>
+                    <tr>
+                        <th><label> <label> <input type="checkbox" name="" id="check_all"> 全選</label></th>
+                        <th>品名/規格</th>
+                        <th>單價</th>
+                        <th>數量</th>
+                        <th>小計</th>
+                    </tr>
+                </thead>
+
+                <tbody>
+                    <tr>
+                        <td colspan="5">
+                            <hr>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label class="items">
+                                <input type="checkbox" name="" id="">
+                                <img src="https://cdn.britannica.com/s:800x1000/22/206222-050-3F741817/Domestic-feline-tabby-cat.jpg"
+                                    alt="">
+                            </label>
+                        </td>
+                        <td>
+                            <p>品名</p>
+                            <p>規格</p>
+                        </td>
+                        <td>1,000</td>
+                        <td>2</td>
+                        <td>1,000</td>
+                    </tr>
+
+
+                    <tr>
+                        <td colspan="5">
+                            <hr>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label  class="items">
+                                <input type="checkbox" name="" id="">
+                                <img src="https://cdn.britannica.com/s:800x1000/22/206222-050-3F741817/Domestic-feline-tabby-cat.jpg"
+                                    alt="">
+                            </label>
+                        </td>
+                        <td>
+                            <p>品名</p>
+                            <p>規格</p>
+                        </td>
+                        <td>1,000</td>
+                        <td>2</td>
+                        <td>1,000</td>
+                    </tr>
+                </tbody>
+            </table>
+            <hr>
+
+            <span>退換貨原因: </span>
+            <select name="cars">
+                <option value="" selected disabled hidden>選擇退換貨原因</option>
+                <option value="sale">商品瑕疵</option>
+                <option value="sale">不符合需求</option>
+                <option value="eval">買錯顏色/尺寸</option>
+                <option value="eval">其他</option>
+            </select>
+            <br>
+            <div class="re_ex_reason">
+                <span>退換貨詳情: </span>
+                <textarea name="" id="" cols="30" rows="5"></textarea>
+            </div>
+            <div>
+                <span>商品圖片: </span>
+                <label class="reex_upload"><input type="file" name="reex_upload" id="" style="display: none" accept="image/*">上傳</label>
+                <div class="img_preview"></div>
+            </div>
+
+            <hr>
+            <!-- 按鈕 -->
+            <section class="confirm">
+                <button><i class="fas fa-arrow-circle-left"></i>返回我的訂單</button>
+                <button><i class="fas fa-arrow-circle-right"></i>確認送出</button>
+            </section>
+
+
+        </section>
+
+    </main>
+    <div class=confirm_jump_bg style="display:none">
+        <div class="confirm_jump">
+            <p>感謝您的意見! </p>
+            <p>客服人員將盡快與您聯繫辦理相關事宜!</p>
+            <div>
+                <button class="btn_goto_orderlist">返回我的訂單</button>
+                <button class="btn_goto_index">繼續找商品</button>
+            </div>
+        </div>
+    </div>
+    <footer>footer~~~~~~~~~~~~~~~~</footer>
+
+    <script src="vendors/jquery-3.6.0.min.js"></script>
+    <script src="js/index.js"></script>
+</body>
+
+</html>

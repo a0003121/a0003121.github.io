@@ -1,0 +1,229 @@
+
+article.search_bar div.btn{
+    padding-right: 30px;
+}
+
+
+/* 按鈕區塊 */
+
+
+section.confirm {
+    padding: 20px 10px;
+    border-radius: 0 0 10px 10px;
+    position: sticky;
+    bottom: 0;
+    z-index: 50;
+}
+
+section.confirm span {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+
+/* 主要白色區塊 */
+
+section.main_part {
+    background-color: white;
+    margin: 30px 30px 0 30px;
+    padding: 3% 3% 1% 3%;
+    border-radius: 10px 10px 0 0;
+}
+
+
+/* 確認按鈕區塊 */
+
+section.confirm {
+    background-color: #b7c6db;
+    margin: 0 30px 30px 30px;
+}
+
+
+/* 購物車頁面設定 */
+
+
+/* 上面購物狀態 */
+
+section.process>:nth-child(odd) {
+    font-size: 5vmax;
+    text-align: center;
+    margin: auto;
+}
+
+section.process>:nth-child(even) {
+    font-size: 2vmax;
+    text-align: center;
+    margin: auto;
+}
+
+section.process>div>div>p {
+    font-size: 18px;
+    font-weight: bold;
+    margin: auto;
+}
+
+section.process>div>div{
+    display: inline-block;
+}
+
+/* 購物車商品 */
+div.each_product{
+    position: relative;
+}
+
+div.each_product div.pic label img{
+    max-height: 30vh;
+}
+
+div.cart_header{
+    text-align: center;
+}
+
+div.cart_header :first-child{
+    text-align: start;
+}
+
+div.each_product div{
+    margin:auto;
+    text-align: center;
+}
+
+div.each_product div.amount{
+    min-width: 120px;
+}
+
+div.each_product div.amount input{
+    width: 30px;
+    margin:0;
+    padding:0;
+    border-radius: 0;
+    margin-top: 1px;
+    bottom: 0;
+    text-align: center;
+}
+
+div.each_product div button{
+    margin: 0;
+    padding:0px 5px;
+    border-radius: 0;
+}
+
+div.each_product div button.minus{
+    position: relative;
+    left:4px;
+    padding:0px 6px;
+    border-right: none;
+}
+
+div.each_product div input{
+    border-right: none;
+    border-left: none;
+}
+
+div.each_product div button.plus{
+    position: relative;
+    right:4px;
+    border-left: none;
+    padding: 0 3px;
+}
+
+form#cart{
+    min-width: 560px;
+}
+
+section.main_part {
+    overflow: auto;
+}
+
+div.trash{
+    cursor: pointer;
+}
+
+
+/* 購物車換規格 */
+
+
+select option:disabled {
+    color: rgb(172, 170, 170);
+}
+
+/* 下面 */
+div.subtotal_right, section.confirm{
+    text-align: right;
+}
+
+
+/* 付款資訊頁面設定和資訊確認頁面設定 */
+
+
+
+
+input[name="address"] {
+    width: 378px;
+}
+
+section.main_part>section.address input,
+section.main_part>section.credit_info input {
+    margin: 10px;
+    height:30px;
+    border-radius: 5px;
+    border-style: hidden;
+    border: 1.3px solid gray;
+}
+
+section.main_part>section.address select {
+    margin-bottom: 10px;
+    margin-top: 5px;
+}
+
+section.address select {
+    margin-right: 10px;
+    height: 30px;
+}
+
+label#card input{
+    width: 70px;
+    margin: 5px 10px;
+    text-align: center;
+}
+
+label.phone_area input:first-child{
+    width: 70px;
+    text-align: center;
+}
+
+label.phone_area input:nth-child(2){
+    text-align: center;
+    width: 103px;
+}
+
+input[name="email"]{
+    width: 347px;
+}
+
+input[name="zipcode"]{
+    width:118px;
+    text-align: center;
+} 
+
+input[name="CVN"]{
+    width: 190px;
+}
+
+
+/* 資訊確認 */
+section.product div.product_list{
+    width:75%;
+    min-width: 560px;
+}
+
+section.product{
+    overflow: auto;
+}
+
+/* 付款完成頁面設定 */
+
+section.main_part i.fa-check-circle {
+    color: rgb(5, 197, 47);
+    margin-right: 10px;
+}
